@@ -1,0 +1,17 @@
+<html lang="en">
+<head>
+    <title><%= agenciesTitle %></title>
+    <%- include('styles'); %>
+</head>
+<body>
+<%- include('menu') %>
+<div class="container">
+    <h1 class="header"><%= agenciesTitle %></h1>
+    <ul>
+        <% agencies.forEach(agency => { %>
+            <li><%= agency.name %></li>
+        <% }); %>
+    </ul>
+</div>
+</body>
+</html>

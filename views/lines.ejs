@@ -1,0 +1,17 @@
+<html lang="en">
+<head>
+    <title><%= linesTitle %></title>
+    <%- include('styles'); %>
+</head>
+<body>
+<%- include('menu') %>
+<div class="container">
+    <h1 class="header"><%= linesTitle %></h1>
+    <ul>
+        <% lines.forEach(line => { %>
+            <li><%= line.name %></li>
+        <% }); %>
+    </ul>
+</div>
+</body>
+</html>

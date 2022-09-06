@@ -1,5 +1,5 @@
 export const strings = {
-    lineList: 'Список Маршрутов',
+    lines: 'Маршруты',
     noDataText: 'Нет данных',
-    appTitle: 'CityBus, версия 2.0 Beta',
+    agencies: 'Перевозчики',
 }

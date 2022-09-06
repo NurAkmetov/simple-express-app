@@ -6,10 +6,10 @@ const {Router} = require('express');
 const router = Router();
 
 router.get('', (req: Request, res: Response) => {
-    res.render('lines', {
+    res.render('agencies', {
         linesTitle: strings.lines,
         agenciesTitle: strings.agencies,
-        lines: [{id: 1, name: 'ss'}, {id: 2, name: 'sdsd'}]
+        agencies: [{id: 1, name: 'ss'}, {id: 2, name: 'sdsd'}]
     })
 });
 
