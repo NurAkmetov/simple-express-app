@@ -6,20 +6,18 @@
 <body>
 <%- include('menu') %>
 <div class="container">
-    <h1><%= agenciesTitle %></h1>
+    <h1><%= agency.name %></h1>
     <table>
         <tr>
             <th><%= id %></th>
             <th><%= name %></th>
             <th><%= region %></th>
         </tr>
-        <% agencies.forEach(agency => { %>
-            <tr>
-                <td><%= agency.id %></td>
-                <td><a href="agencies/<%= agency.id %>"><%= agency.name %></a></td>
-                <td><%= agency.region %></td>
-            </tr>
-        <% }); %>
+        <tr>
+            <td><%= agency.id %></td>
+            <td><%= agency.name %></td>
+            <td><%= agency.region %></td>
+        </tr>
     </table>
 </div>
 </body>

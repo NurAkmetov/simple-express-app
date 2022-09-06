@@ -21,4 +21,20 @@ router.get('', async (req: Request, res: Response) => {
     })
 });
 
+router.get('/:id', async (req: Request, res: Response) => {
+    const {id} = req.params;
+    const parsedId = parseInt(id);
+    const AppDataSource = await getDataSource();
+    const agency = await AppDataSource.getRepository(Agency).findOneBy({id: parsedId});
+
+    res.render(`agency`, {
+        linesTitle: strings.lines,
+        agenciesTitle: strings.agencies,
+        agency: agency,
+        id: strings.id,
+        name: strings.name,
+        region: strings.region
+    })
+});
+
 module.exports = router;
