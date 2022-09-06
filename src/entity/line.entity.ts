@@ -10,7 +10,7 @@ export class Line {
     name!: string
 
     @Column()
-    agencyId!: string
+    agencyId!: number
 
     @OneToOne(type => Agency) @JoinColumn()
     agency: Agency;

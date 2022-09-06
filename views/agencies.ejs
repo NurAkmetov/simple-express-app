@@ -7,11 +7,20 @@
 <%- include('menu') %>
 <div class="container">
     <h1><%= agenciesTitle %></h1>
-    <ul>
+    <table>
+        <tr>
+            <th><%= id %></th>
+            <th><%= name %></th>
+            <th><%= region %></th>
+        </tr>
         <% agencies.forEach(agency => { %>
-            <li><%= agency.name %></li>
+            <tr>
+                <td><%= agency.id %></td>
+                <td><%= agency.name %></td>
+                <td><%= agency.region %></td>
+            </tr>
         <% }); %>
-    </ul>
+    </table>
 </div>
 </body>
 </html>

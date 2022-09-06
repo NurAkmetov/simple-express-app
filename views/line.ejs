@@ -8,12 +8,10 @@
 <div class="container">
     <h1><%= linesTitle %></h1>
     <ul class="list-group">
-        <% lines.forEach(line => { %>
-            <li>
-                <span class="badge"><%= line.id %></span>
-                <a href="lines/<%= line.id %>"><%= line.name %></a>
-            </li>
-        <% }); %>
+        <li>
+            <span class="badge"><%= line.id %></span>
+            <%= line.name %>
+        </li>
     </ul>
 </div>
 </body>

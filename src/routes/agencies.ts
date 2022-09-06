@@ -14,7 +14,10 @@ router.get('', async (req: Request, res: Response) => {
     res.render('agencies', {
         linesTitle: strings.lines,
         agenciesTitle: strings.agencies,
-        agencies: agencies
+        agencies: agencies,
+        id: strings.id,
+        name: strings.name,
+        region: strings.region
     })
 });
 

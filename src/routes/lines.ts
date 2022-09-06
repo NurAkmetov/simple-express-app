@@ -18,4 +18,17 @@ router.get('', async (req: Request, res: Response) => {
     })
 });
 
+router.get('/:id', async (req: Request, res: Response) => {
+    const {id} = req.params;
+    const parsedId = parseInt(id);
+    const AppDataSource = await getDataSource();
+    const line = await AppDataSource.getRepository(Line).findOneBy({id: parsedId});
+
+    res.render(`line`, {
+        linesTitle: strings.lines,
+        agenciesTitle: strings.agencies,
+        line: line
+    })
+});
+
 module.exports = router;
