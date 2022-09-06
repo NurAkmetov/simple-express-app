@@ -2,17 +2,6 @@ const express = require('express');
 const dotenv = require('dotenv');
 const linesRoute = require('./routes/lines');
 const agenciesRoute = require('./routes/agencies');
-import "reflect-metadata";
-import {AppDataSource} from './data-source';
-
-AppDataSource
-    .initialize()
-    .then(() => {
-        console.log("Data Source has been initialized!")
-    })
-    .catch((err) => {
-        console.error("Error during Data Source initialization:", err)
-    });
 
 dotenv.config();
 
