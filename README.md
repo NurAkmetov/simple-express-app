@@ -4,4 +4,5 @@ Steps to run this project:
 
 1. Run `npm i` command
 2. Setup database settings inside `data-source.ts` file
-3. Run `npm start` command
+3. Run `npm run dev` command to start this app locally
+4. ejs - http://localhost:5005/lines 
